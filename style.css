@@ -1,0 +1,33 @@
+text {
+    /* 色はお好みで */
+    stroke: black;
+    /* 文字の中身は塗りつぶさない */
+    fill: none;
+    /* 文字が大きい方がアニメーションが綺麗なので50pxを指定 */
+    font-size: 50px;
+    /* 100%だと最後まで表示されないので多めに設定する */
+    stroke-dasharray: 150% 150%;
+    /* 線が細いほうがアニメーションが綺麗なので0.5pxを指定 */
+    stroke-width: 0.5px;
+    -webkit-animation: stroke-anim 5s linear;
+    animation: stroke-anim 5s linear;
+}
+@-webkit-keyframes stroke-anim {
+  0% {
+    /* 100%だと最後まで表示されないので多めに設定する */
+    stroke-dashoffset: 150%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes stroke-anim {
+  0% {
+    /* 100%だと最後まで表示されないので多めに設定する */
+    stroke-dashoffset: 150%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
