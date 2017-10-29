@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*------- base color ---------*/
+$bBlue:#5d86ff;
+$bSlyblue:#78b9ff;
+$bGray:#EAEAE0;
+$bBlack:#444444;
+$bWhite:#ffffff;
+
+
+/*------- common ---------*/
+body {
+  font:16px "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
+  color: $bBlack;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/*------- txt color ----------------*/
+.blue{color: $bBlue;}
+.skyblue{color: $bSlyblue;}
+.gray{color: $bGray;}
+.black{color: $bBlack;}
+.white{color: $bWhite;}

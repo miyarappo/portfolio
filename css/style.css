@@ -1,0 +1,156 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*------- base color ---------*/
+/*------- common ---------*/
+body {
+  font: 16px "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
+  color: #444444;
+  box-sizing: border-box; }
+
+.container {
+  width: 960px;
+  margin: 0 auto; }
+
+/*------- txt color ----------------*/
+.blue {
+  color: #5d86ff; }
+
+.skyblue {
+  color: #78b9ff; }
+
+.gray {
+  color: #EAEAE0; }
+
+.black {
+  color: #444444; }
+
+.white {
+  color: #ffffff; }
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 10;
+  background: #ffffff;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15); }
+  header .header-top {
+    width: 100%;
+    height: 10px;
+    background: #5d86ff; }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px; }
+    header .container ul {
+      display: flex;
+      justify-content: space-between; }
+      header .container ul li {
+        margin-left: 20px; }
+
+.top {
+  width: 100%;
+  height: 500px;
+  background: #EAEAE0;
+  padding-top: 50px;
+  text-align: center; }
+  .top h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #5d86ff; }
+  .top h2:after {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 2px;
+    margin: 5px auto 0;
+    background: #5d86ff; }
+  .top a {
+    display: block;
+    width: 170px;
+    height: 30px;
+    margin: 10px auto 20px;
+    border-radius: 15px;
+    background: #5d86ff;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 30px; }
+
+.project-details {
+  width: 100%;
+  text-align: left; }
+  .project-details h3 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px; }
+  .project-details h3:after {
+    display: block;
+    content: "";
+    width: 150px;
+    height: 2px;
+    margin: 5px auto 0;
+    background: #444444; }
+  .project-details .text-container {
+    width: 740px;
+    margin: 0 auto;
+    padding-top: 24px; }
+    .project-details .text-container p {
+      margin-bottom: 40px;
+      text-align: justify;
+      line-height: 24px; }
+
+.screen-items {
+  width: 740px;
+  margin: 40px auto; }
+  .screen-items .screen-item-box {
+    margin-bottom: 40px; }
+    .screen-items .screen-item-box p {
+      margin-top: 8px;
+      text-align: center; }
+  .screen-items .screen-item {
+    width: 740px;
+    height: 450px;
+    background: #dddddd;
+    border-radius: 16px; }
+    .screen-items .screen-item .item-upper {
+      display: flex;
+      padding: 8px 0 0 16px; }
+      .screen-items .screen-item .item-upper .item-upper-red {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background: #f35f57; }
+      .screen-items .screen-item .item-upper .item-upper-yellow {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background: #fbc02a; }
+      .screen-items .screen-item .item-upper .item-upper-green {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #55c942; }
+    .screen-items .screen-item img {
+      width: 720px;
+      height: 415px;
+      padding: 6px 0 0 10px; }
