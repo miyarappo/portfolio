@@ -20,10 +20,13 @@ table {
 
 /*------- base color ---------*/
 /*------- common ---------*/
-body {
-  font: 16px "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
-  color: #444444;
+html {
   box-sizing: border-box; }
+
+body {
+  font-family: "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
+  font-size: 16px;
+  color: #444444; }
 
 .container {
   width: 960px;
@@ -44,6 +47,9 @@ body {
 
 .white {
   color: #ffffff; }
+
+.emphasis {
+  background: linear-gradient(white 50%, yellow); }
 
 header {
   width: 100%;
@@ -154,3 +160,32 @@ header {
       width: 720px;
       height: 415px;
       padding: 6px 0 0 10px; }
+  .screen-items a {
+    display: block;
+    width: 170px;
+    height: 30px;
+    margin: 10px auto 20px;
+    text-align: center;
+    border-radius: 15px;
+    background: #5d86ff;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 30px; }
+
+footer {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  padding-top: 50px; }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    margin: 0 auto; }
+    footer ul li {
+      font-size: 32px; }
+      footer ul li a {
+        color: #444444; }
+  footer p {
+    margin-top: 24px;
+    font-size: 8px; }

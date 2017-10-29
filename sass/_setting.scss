@@ -9,10 +9,14 @@ $bWhite:#ffffff;
 
 
 /*------- common ---------*/
-body {
-  font:16px "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
-  color: $bBlack;
+html {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
+  font-size: 16px;
+  color: $bBlack;
 }
 
 .container {
