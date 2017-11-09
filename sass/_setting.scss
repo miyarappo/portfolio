@@ -16,16 +16,17 @@ html {
 body {
   font-family: "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.5em;
   color: $bBlack;
 }
 
-.small {
-  font-size: 12px;
-}
-
-.large {
-  font-size: 20px;
-}
+// .small {
+//   font-size: 12px;
+// }
+//
+// .large {
+//   font-size: 20px;
+// }
 
 .container {
   width: 640px;
