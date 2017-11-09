@@ -19,8 +19,16 @@ body {
   color: $bBlack;
 }
 
+.small {
+  font-size: 12px;
+}
+
+.large {
+  font-size: 20px;
+}
+
 .container {
-  width: 960px;
+  width: 640px;
   margin: 0 auto;
 }
 
