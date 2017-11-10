@@ -26,87 +26,153 @@ html {
 body {
   font-family: "Helvetica neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Meiryo, Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.5em;
   color: #444444; }
 
 .container {
-  width: 960px;
+  width: 640px;
   margin: 0 auto; }
 
-/*------- txt color ----------------*/
-.blue {
-  color: #5d86ff; }
+/*------- hamberger menu ---------*/
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease; }
+  .button_container:hover {
+    opacity: .7; }
+  .button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #FFF; }
+  .button_container.active .middle {
+    opacity: 0;
+    background: #FFF; }
+  .button_container.active .bottom {
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #FFF; }
+  .button_container span {
+    background: #FF5252;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer; }
+    .button_container span:nth-of-type(2) {
+      top: 11px; }
+    .button_container span:nth-of-type(3) {
+      top: 22px; }
 
-.skyblue {
-  color: #78b9ff; }
+.overlay {
+  position: fixed;
+  background: #FF5252;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden; }
+  .overlay.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%; }
+    .overlay.open li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s; }
+      .overlay.open li:nth-of-type(2) {
+        animation-delay: .4s; }
+      .overlay.open li:nth-of-type(3) {
+        animation-delay: .45s; }
+      .overlay.open li:nth-of-type(4) {
+        animation-delay: .50s; }
+  .overlay nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    text-align: center; }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%; }
+    .overlay ul li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0; }
+      .overlay ul li a {
+        display: block;
+        position: relative;
+        color: #FFF;
+        text-decoration: none;
+        overflow: hidden; }
+        .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+          width: 100%; }
+        .overlay ul li a:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: #FFF;
+          transition: .35s; }
 
-.gray {
-  color: #EAEAE0; }
-
-.black {
-  color: #444444; }
-
-.white {
-  color: #ffffff; }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
 
 .emphasis {
   background: linear-gradient(white 50%, yellow); }
 
-header {
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  z-index: 10;
-  background: #ffffff;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15); }
-  header .header-top {
-    width: 100%;
-    height: 10px;
-    background: #5d86ff; }
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    line-height: 40px; }
-    header .container ul {
-      display: flex;
-      justify-content: space-between; }
-      header .container ul li {
-        margin-left: 20px; }
-
 .top {
   width: 100%;
-  height: 500px;
-  background: #EAEAE0;
-  padding-top: 50px;
-  text-align: center; }
-  .top h2 {
-    margin-top: 30px;
-    font-size: 24px;
-    color: #5d86ff; }
-  .top h2:after {
-    display: block;
-    content: "";
-    width: 60px;
-    height: 2px;
-    margin: 5px auto 0;
-    background: #5d86ff; }
-  .top a {
-    display: block;
-    width: 170px;
-    height: 30px;
-    margin: 10px auto 20px;
-    border-radius: 15px;
-    background: #5d86ff;
-    text-decoration: none;
-    color: #ffffff;
-    line-height: 30px; }
+  height: 80vh;
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
+  background-size: cover; }
+  .top .top-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative; }
+    .top .top-bg .top-title {
+      position: absolute;
+      bottom: 10vh;
+      color: #ffffff; }
+      .top .top-bg .top-title h2 {
+        font-size: 40px;
+        letter-spacing: 3px;
+        margin-bottom: 8px; }
 
 .project-details {
+  padding-top: 64px;
   width: 100%;
   text-align: left; }
   .project-details h3 {
     text-align: center;
-    margin-top: 30px;
-    font-size: 24px; }
+    font-size: 24px;
+    margin-bottom: 40px; }
   .project-details h3:after {
     display: block;
     content: "";
@@ -114,25 +180,21 @@ header {
     height: 2px;
     margin: 5px auto 0;
     background: #444444; }
-  .project-details .text-container {
-    width: 740px;
-    margin: 0 auto;
-    padding-top: 24px; }
-    .project-details .text-container p {
-      margin-bottom: 40px;
-      text-align: justify;
-      line-height: 24px; }
+  .project-details p {
+    margin-bottom: 40px;
+    text-align: justify;
+    line-height: 24px; }
 
 .screen-items {
-  width: 740px;
-  margin: 40px auto; }
+  width: 640px;
+  margin: 96px auto; }
   .screen-items .screen-item-box {
-    margin-bottom: 40px; }
+    margin-bottom: 64px; }
     .screen-items .screen-item-box p {
       margin-top: 8px;
       text-align: center; }
   .screen-items .screen-item {
-    width: 740px;
+    width: 640px;
     height: 450px;
     background: #dddddd;
     border-radius: 16px; }
@@ -157,7 +219,7 @@ header {
         border-radius: 50%;
         background: #55c942; }
     .screen-items .screen-item img {
-      width: 720px;
+      width: 620px;
       height: 415px;
       padding: 6px 0 0 10px; }
   .screen-items a {

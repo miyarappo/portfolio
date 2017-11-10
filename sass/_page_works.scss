@@ -4,71 +4,38 @@
   background: linear-gradient(white 50%, yellow);
 }
 
-header {
+.top {
   width: 100%;
-  height: 50px;
-  position: fixed;
-  z-index: 10;
-  background: $bWhite;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
-  .header-top {
+  height: 80vh;
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
+  background-size: cover;
+  // background-position: 0px -80px;
+  .top-bg {
     width: 100%;
-    height: 10px;
-    background: $bBlue;
-  }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    line-height: 40px;
-    ul {
-      display: flex;
-      justify-content: space-between;
-      li {
-        margin-left: 20px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    .top-title {
+      position: absolute;
+      bottom: 10vh;
+      color: $bWhite;
+      h2 {
+        font-size: 40px;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
       }
     }
   }
 }
 
-.top {
-  width: 100%;
-  height: 500px;
-  background: $bGray;
-  padding-top: 50px;
-  text-align: center;
-  h2 {
-    margin-top: 30px;
-    font-size: 24px;
-    color: $bBlue;
-  }
-  h2:after {
-    display: block;
-    content: "";
-    width: 60px;
-    height: 2px;
-    margin: 5px auto 0;
-    background: $bBlue;
-  }
-  a {
-    display: block;
-    width: 170px;
-    height: 30px;
-    margin: 10px auto 20px;
-    border-radius: 15px;
-    background: $bBlue;
-    text-decoration: none;
-    color: $bWhite;
-    line-height: 30px;
-  }
-}
-
 .project-details {
+  padding-top: 64px;
   width: 100%;
   text-align: left;
   h3 {
     text-align: center;
-    margin-top: 30px;
     font-size: 24px;
+    margin-bottom: 40px;
   }
   h3:after {
     display: block;
@@ -78,30 +45,25 @@ header {
     margin: 5px auto 0;
     background: $bBlack;
   }
-  .text-container {
-    width: 740px;
-    margin: 0 auto;
-    padding-top: 24px;
-    p {
-      margin-bottom: 40px;
-      text-align: justify;
-      line-height: 24px;
-    }
+  p {
+    margin-bottom: 40px;
+    text-align: justify;
+    line-height: 24px;
   }
 }
 
 .screen-items {
-  width: 740px;
-  margin: 40px auto;
+  width: 640px;
+  margin: 96px auto;
   .screen-item-box {
-    margin-bottom: 40px;
+    margin-bottom: 64px;
     p {
       margin-top: 8px;
       text-align: center;
     }
   }
   .screen-item {
-    width: 740px;
+    width: 640px;
     height: 450px;
     background: #dddddd;
     border-radius: 16px;
@@ -130,7 +92,7 @@ header {
       }
     }
     img {
-      width: 720px;
+      width: 620px;
       height: 415px;
       padding: 6px 0 0 10px;
     }
