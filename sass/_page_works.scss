@@ -1,14 +1,15 @@
 @charset "UTF-8";
 
 .emphasis {
-  // background: linear-gradient(white 60%, skyblue);
+  background: linear-gradient(white 50%, yellow);
 }
 
 .top {
   width: 100%;
-  height: 70vh;
-  background: url(../images/works/tokyodtm/mock.jpg);
+  height: 80vh;
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
   background-size: cover;
+  // background-position: 0px -80px;
   .top-bg {
     width: 100%;
     height: 100%;
