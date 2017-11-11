@@ -19,10 +19,30 @@
       position: absolute;
       bottom: 10vh;
       color: $bWhite;
+      p:first-child {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
       h2 {
         font-size: 40px;
         letter-spacing: 3px;
         margin-bottom: 8px;
+      }
+      .top-btn {
+        border: 2px solid $bWhite;
+        border-radius: 20px;
+        width: 122px;
+        text-align: center;
+        margin-top: 24px;
+        cursor: pointer;
+        transition: all .5s ease-out;
+        a {
+          text-decoration: none;
+          color: $bWhite;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
@@ -100,14 +120,21 @@
   a {
     display: block;
     width: 170px;
-    height: 30px;
+    height: 40px;
     margin: 10px auto 20px;
     text-align: center;
-    border-radius: 15px;
-    background: $bBlue;
+    border-radius: 24px;
+    background: linear-gradient(to left, #00c6ff, #0072ff);
     text-decoration: none;
     color: $bWhite;
-    line-height: 30px;
+    line-height: 40px;
+    transition: all .5s ease-out;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  p {
+    text-align: center;
   }
 }
 
@@ -125,6 +152,10 @@ footer {
       font-size: 32px;
       a {
         color: $bBlack;
+        transition: all .5s ease-out;
+        &:hover {
+          opacity: .5;
+        }
       }
     }
   }

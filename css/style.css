@@ -34,29 +34,29 @@ body {
   margin: 0 auto; }
 
 /*------- hamberger menu ---------*/
-.button_container {
+.hamburger-menu {
   position: fixed;
   top: 5%;
-  right: 2%;
+  right: 3%;
   height: 27px;
   width: 35px;
   cursor: pointer;
   z-index: 100;
   transition: opacity .25s ease; }
-  .button_container:hover {
+  .hamburger-menu:hover {
     opacity: .7; }
-  .button_container.active .top {
+  .hamburger-menu.active .top {
     transform: translateY(11px) translateX(0) rotate(45deg);
-    background: #FFF; }
-  .button_container.active .middle {
+    background: #ffffff; }
+  .hamburger-menu.active .middle {
     opacity: 0;
-    background: #FFF; }
-  .button_container.active .bottom {
+    background: #ffffff; }
+  .hamburger-menu.active .bottom {
     transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: #FFF; }
-  .button_container span {
-    background: #FF5252;
-    border: none;
+    background: #ffffff; }
+  .hamburger-menu span {
+    background: #ffffff;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
     height: 5px;
     width: 100%;
     position: absolute;
@@ -64,14 +64,15 @@ body {
     left: 0;
     transition: all .35s ease;
     cursor: pointer; }
-    .button_container span:nth-of-type(2) {
+    .hamburger-menu span:nth-of-type(2) {
       top: 11px; }
-    .button_container span:nth-of-type(3) {
+    .hamburger-menu span:nth-of-type(3) {
       top: 22px; }
 
 .overlay {
   position: fixed;
-  background: #FF5252;
+  background: #444444;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
@@ -86,20 +87,17 @@ body {
     height: 100%; }
     .overlay.open li {
       animation: fadeInRight .5s ease forwards;
-      animation-delay: .35s; }
+      animation-delay: .3s; }
       .overlay.open li:nth-of-type(2) {
         animation-delay: .4s; }
       .overlay.open li:nth-of-type(3) {
         animation-delay: .45s; }
-      .overlay.open li:nth-of-type(4) {
-        animation-delay: .50s; }
   .overlay nav {
     position: relative;
     height: 70%;
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    font-family: 'Vollkorn', serif;
     font-weight: 400;
     text-align: center; }
   .overlay ul {
@@ -115,11 +113,12 @@ body {
       height: calc(100% / 4);
       min-height: 50px;
       position: relative;
-      opacity: 0; }
+      opacity: 0;
+      line-height: 50px; }
       .overlay ul li a {
         display: block;
         position: relative;
-        color: #FFF;
+        color: #ffffff;
         text-decoration: none;
         overflow: hidden; }
         .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
@@ -132,7 +131,7 @@ body {
           width: 0%;
           transform: translateX(-50%);
           height: 3px;
-          background: #FFF;
+          background: #ffffff;
           transition: .35s; }
 
 @keyframes fadeInRight {
@@ -142,6 +141,16 @@ body {
   100% {
     opacity: 1;
     left: 0; } }
+
+.overlay-menu-icon {
+  overflow: hidden; }
+  .overlay-menu-icon li {
+    float: left;
+    margin-right: 40px; }
+    .overlay-menu-icon li:last-child {
+      margin-right: 0; }
+    .overlay-menu-icon li a:after {
+      opacity: 0; }
 
 .emphasis {
   background: linear-gradient(white 50%, yellow); }
@@ -160,10 +169,26 @@ body {
       position: absolute;
       bottom: 10vh;
       color: #ffffff; }
+      .top .top-bg .top-title p:first-child {
+        font-size: 14px;
+        margin-bottom: 8px; }
       .top .top-bg .top-title h2 {
         font-size: 40px;
         letter-spacing: 3px;
         margin-bottom: 8px; }
+      .top .top-bg .top-title .top-btn {
+        border: 2px solid #ffffff;
+        border-radius: 20px;
+        width: 122px;
+        text-align: center;
+        margin-top: 24px;
+        cursor: pointer;
+        transition: all .5s ease-out; }
+        .top .top-bg .top-title .top-btn a {
+          text-decoration: none;
+          color: #ffffff; }
+        .top .top-bg .top-title .top-btn:hover {
+          opacity: 0.8; }
 
 .project-details {
   padding-top: 64px;
@@ -225,14 +250,19 @@ body {
   .screen-items a {
     display: block;
     width: 170px;
-    height: 30px;
+    height: 40px;
     margin: 10px auto 20px;
     text-align: center;
-    border-radius: 15px;
-    background: #5d86ff;
+    border-radius: 24px;
+    background: linear-gradient(to left, #00c6ff, #0072ff);
     text-decoration: none;
     color: #ffffff;
-    line-height: 30px; }
+    line-height: 40px;
+    transition: all .5s ease-out; }
+    .screen-items a:hover {
+      opacity: .5; }
+  .screen-items p {
+    text-align: center; }
 
 footer {
   width: 100%;
@@ -247,7 +277,10 @@ footer {
     footer ul li {
       font-size: 32px; }
       footer ul li a {
-        color: #444444; }
+        color: #444444;
+        transition: all .5s ease-out; }
+        footer ul li a:hover {
+          opacity: .5; }
   footer p {
     margin-top: 24px;
     font-size: 8px; }

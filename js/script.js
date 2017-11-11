@@ -1,15 +1,8 @@
-// window.addEventListener('DOMContentLoaded', function() {
-//   document.querySelector('#toggle').addEventListener('click', function() {
-//     this.toggleClass('active');
-//     document.querySelector('#overlay').toggleClass('open');
-//   }, false);
-// }, false);
+window.addEventListener('DOMContentLoaded', function() {
 
-
-$(function() {
-  $('#toggle').click(function() {
-    console.log('test');
-     $(this).toggleClass('active');
-     $('#overlay').toggleClass('open');
-    });
-});
+  document.querySelector('#toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('#overlay').classList.toggle('open');
+  }, false);
+  
+}, false);

@@ -25,61 +25,48 @@ body {
   margin: 0 auto;
 }
 
-
 /*------- hamberger menu ---------*/
-$color-background: #F5F5F5;
-$color-main: #FF5252;
-$color-active: #FFF;
-$color-link: #FFF;
-
-$button-height: 27px;
-$button-width: 35px;
-
-.button_container {
+.hamburger-menu {
   position: fixed;
   top: 5%;
-  right: 2%;
-  height: $button-height;
-  width: $button-width;
+  right: 3%;
+  height: 27px;
+  width: 35px;
   cursor: pointer;
   z-index: 100;
   transition: opacity .25s ease;
-
   &:hover {
     opacity: .7;
   }
-
   &.active {
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
-      background: $color-active;
+      background: $bWhite;
     }
     .middle {
       opacity: 0;
-      background: $color-active;
+      background: $bWhite;
     }
-
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
-      background: $color-active;
+      background: $bWhite;
     }
   }
-
   span {
-  background: $color-main;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
-
+    background: $bWhite;
+    // background: $bBlue;
+    // background: linear-gradient(to left, #00c6ff, #0072ff);
+    box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  all .35s ease;
+    cursor: pointer;
     &:nth-of-type(2) {
       top: 11px;
     }
-
     &:nth-of-type(3) {
       top: 22px;
     }
@@ -88,7 +75,8 @@ $button-width: 35px;
 
 .overlay {
   position: fixed;
-  background: $color-main;
+  background: $bBlack;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
@@ -97,24 +85,18 @@ $button-width: 35px;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-
   &.open {
     opacity: .9;
     visibility: visible;
     height: 100%;
-
     li {
       animation: fadeInRight .5s ease forwards;
-      animation-delay: .35s;
-
+      animation-delay: .3s;
       &:nth-of-type(2) {
         animation-delay: .4s;
       }
       &:nth-of-type(3) {
         animation-delay: .45s;
-      }
-      &:nth-of-type(4) {
-        animation-delay: .50s;
       }
     }
   }
@@ -124,7 +106,7 @@ $button-width: 35px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    font-family: 'Vollkorn', serif;
+    // font-family: 'Vollkorn', serif;
     font-weight: 400;
     text-align: center;
   }
@@ -135,7 +117,6 @@ $button-width: 35px;
     display: inline-block;
     position: relative;
     height: 100%;
-
     li {
       display: block;
       height: 25%;
@@ -143,20 +124,18 @@ $button-width: 35px;
       min-height: 50px;
       position: relative;
       opacity: 0;
-
+      line-height: 50px;
       a {
         display: block;
         position: relative;
-        color: $color-link;
+        color: $bWhite;
         text-decoration: none;
         overflow: hidden;
-
         &:hover:after,
-         &:focus:after,
-         &:active:after {
-           width: 100%;
-         }
-
+        &:focus:after,
+        &:active:after {
+          width: 100%;
+        }
         &:after {
           content: '';
           position: absolute;
@@ -165,7 +144,7 @@ $button-width: 35px;
           width: 0%;
           transform: translateX(-50%);
           height: 3px;
-          background: $color-link;
+          background: $bWhite;
           transition: .35s;
         }
       }
@@ -181,5 +160,19 @@ $button-width: 35px;
   100% {
     opacity: 1;
     left: 0;
+  }
+}
+
+.overlay-menu-icon {
+  overflow: hidden;
+  li {
+    float: left;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a:after {
+      opacity: 0;
+    }
   }
 }
