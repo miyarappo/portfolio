@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300i,400,700i);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -151,6 +152,94 @@ body {
       margin-right: 0; }
     .overlay-menu-icon li a:after {
       opacity: 0; }
+
+.home-top {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/home/home_top.jpg) no-repeat;
+  background-size: cover; }
+  .home-top .home-top-bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 198, 255, 0.8), rgba(0, 114, 255, 0.8)); }
+    .home-top .home-top-bg .home-top-title {
+      padding-top: 38vh;
+      color: #ffffff;
+      text-align: center; }
+      .home-top .home-top-bg .home-top-title h1 {
+        font-size: 80px;
+        letter-spacing: 3px;
+        line-height: 1.0em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-style: italic; }
+      .home-top .home-top-bg .home-top-title .home-top-sub {
+        font-size: 24px;
+        line-height: 1.8em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        font-style: italic; }
+      .home-top .home-top-bg .home-top-title .home-top-btn {
+        font-size: 28px;
+        width: 160px;
+        height: 50px;
+        line-height: 50px;
+        border: 2px solid #ffffff;
+        border-radius: 40px;
+        margin: 40px auto 0; }
+        .home-top .home-top-bg .home-top-title .home-top-btn a {
+          color: #ffffff;
+          text-decoration: none; }
+    .home-top .home-top-bg .home-top-arrow {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      z-index: 2;
+      display: inline-block;
+      transform: translate(0, -50%);
+      text-decoration: none; }
+      .home-top .home-top-bg .home-top-arrow span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(-45deg);
+        animation: fadeArrow 2s infinite;
+        box-sizing: border-box; }
+
+.home-works {
+  width: 85%;
+  margin: 48px auto;
+  overflow: hidden; }
+  .home-works .work-box {
+    width: 48%;
+    height: 400px;
+    float: left;
+    background: black; }
+    .home-works .work-box a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer; }
+    .home-works .work-box:nth-child(odd) {
+      margin-right: 4%; }
+  .home-works .work-tokyodtm {
+    background: url(../images/home/tokyodtm_top.jpg) no-repeat;
+    background-size: cover; }
+
+@keyframes _fadeArrow {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0; } }
 
 .emphasis {
   background: linear-gradient(white 50%, yellow); }
