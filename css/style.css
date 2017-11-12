@@ -57,7 +57,6 @@ body {
     background: #ffffff; }
   .hamburger-menu span {
     background: #ffffff;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
     height: 5px;
     width: 100%;
     position: absolute;
@@ -156,6 +155,7 @@ body {
 .home-top {
   width: 100%;
   height: 100vh;
+  position: fixed;
   top: 0;
   background: url(../images/home/home_top.jpg) no-repeat;
   background-size: cover; }
@@ -168,14 +168,14 @@ body {
       color: #ffffff;
       text-align: center; }
       .home-top .home-top-bg .home-top-title h1 {
-        font-size: 80px;
-        letter-spacing: 3px;
+        font-size: 104px;
+        letter-spacing: 8px;
         line-height: 1.0em;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-style: italic; }
       .home-top .home-top-bg .home-top-title .home-top-sub {
-        font-size: 24px;
+        font-size: 32px;
         line-height: 1.8em;
         font-family: 'Roboto', sans-serif;
         font-weight: lighter;
@@ -216,58 +216,69 @@ body {
         animation: fadeArrow 2s infinite;
         box-sizing: border-box; }
 
-.home-works {
-  background: #ffffff;
-  width: 85%;
-  margin: 0 auto 120px;
-  overflow: hidden; }
-  .home-works .work-box {
-    width: 48%;
-    height: 400px;
-    margin-top: 48px;
-    float: left;
-    position: relative;
-    text-align: center;
-    color: #ffffff;
-    transition: opacity .35s ease-out; }
-    .home-works .work-box * {
-      transition: all 0.6s ease-out; }
-    .home-works .work-box .work-box-explain {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-      .home-works .work-box .work-box-explain h2, .home-works .work-box .work-box-explain p {
-        margin: 0;
+.home-main {
+  width: 100vw;
+  position: relative;
+  top: 100vh;
+  background: #ffffff; }
+  .home-main .home-works {
+    background: #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    overflow: hidden; }
+    .home-main .home-works .work-box {
+      width: 48%;
+      height: 400px;
+      margin-top: 48px;
+      float: left;
+      position: relative;
+      text-align: center;
+      color: #ffffff;
+      transition: opacity .35s ease-out; }
+      .home-main .home-works .work-box * {
+        transition: all 0.6s ease-out; }
+      .home-main .home-works .work-box .work-box-explain {
         position: absolute;
-        width: 100%;
+        bottom: 0;
         left: 0;
-        opacity: 0; }
-      .home-works .work-box .work-box-explain h2 {
-        color: #ffffff;
-        font-size: 32px;
-        display: inline-block;
-        bottom: 53%;
-        transform: translate3d(0%, -100%, 0); }
-      .home-works .work-box .work-box-explain p {
-        color: #ffffff;
-        font-size: 20px;
-        top: 50%;
-        transform: translate3d(0%, 100%, 0); }
-    .home-works .work-box:nth-child(odd) {
-      margin-right: 4%; }
-  .home-works .work-box:hover .work-box-explain {
-    background: rgba(0, 0, 0, 0.5); }
-    .home-works .work-box:hover .work-box-explain h2 {
-      transform: translate3d(0%, 0%, 0);
-      opacity: 1; }
-    .home-works .work-box:hover .work-box-explain p {
-      transform: translate3d(0%, 0%, 0);
-      opacity: 1; }
-  .home-works .work-tokyodtm {
-    background: url(../images/home/tokyodtm_top.jpg) no-repeat;
-    background-size: cover; }
+        width: 100%;
+        height: 100%; }
+        .home-main .home-works .work-box .work-box-explain h2, .home-main .home-works .work-box .work-box-explain p {
+          margin: 0;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          opacity: 0; }
+        .home-main .home-works .work-box .work-box-explain h2 {
+          color: #ffffff;
+          font-size: 32px;
+          display: inline-block;
+          bottom: 53%;
+          transform: translate3d(0%, -100%, 0); }
+        .home-main .home-works .work-box .work-box-explain p {
+          color: #ffffff;
+          font-size: 20px;
+          top: 50%;
+          transform: translate3d(0%, 100%, 0); }
+      .home-main .home-works .work-box:nth-child(odd) {
+        margin-right: 4%; }
+    .home-main .home-works .work-box:hover .work-box-explain {
+      background: rgba(0, 0, 0, 0.5); }
+      .home-main .home-works .work-box:hover .work-box-explain h2 {
+        transform: translate3d(0%, 0%, 0);
+        opacity: 1; }
+      .home-main .home-works .work-box:hover .work-box-explain p {
+        transform: translate3d(0%, 0%, 0);
+        opacity: 1; }
+    .home-main .home-works .work-tokyodtm {
+      background: url(../images/home/tokyodtm_top.jpg) no-repeat;
+      background-size: cover; }
+
+.top-footer {
+  position: relative;
+  top: 100vh;
+  background: #ffffff; }
 
 @keyframes fadeArrow {
   0% {

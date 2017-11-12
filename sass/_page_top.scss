@@ -4,9 +4,7 @@
 .home-top {
   width: 100%;
   height: 100vh;
-  // background-attachment: fixed;
-  // position: absolute;
-  // position: sticky;
+  position: fixed;
   top: 0;
   background: url(../images/home/home_top.jpg) no-repeat;
   background-size: cover;
@@ -19,15 +17,15 @@
       color: $bWhite;
       text-align: center;
       h1 {
-        font-size: 80px;
-        letter-spacing: 3px;
+        font-size: 104px;
+        letter-spacing: 8px;
         line-height: 1.0em;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-style: italic;
       }
       .home-top-sub {
-        font-size: 24px;
+        font-size: 32px;
         line-height: 1.8em;
         font-family: 'Roboto', sans-serif;
         font-weight: lighter;
@@ -77,74 +75,85 @@
   }
 }
 
-.home-works {
-  // position: relative;
-  // z-index: 1;
+.home-main {
+  width: 100vw;
+  position: relative;
+  top: 100vh;
   background: $bWhite;
-  width: 85%;
-  margin: 0 auto 120px;
-  overflow: hidden;
-  .work-box {
-    width: 48%;
-    height: 400px;
-    margin-top: 48px;
-    float: left;
-    position: relative;
-    text-align: center;
-    color: $bWhite;
-    transition: opacity .35s ease-out;
-    * {
-      transition: all 0.6s ease-out;
-    }
-    .work-box-explain {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      h2, p {
-        margin: 0;
+  .home-works {
+    background: $bWhite;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    overflow: hidden;
+    .work-box {
+      width: 48%;
+      height: 400px;
+      margin-top: 48px;
+      float: left;
+      position: relative;
+      text-align: center;
+      color: $bWhite;
+      transition: opacity .35s ease-out;
+      * {
+        transition: all 0.6s ease-out;
+      }
+      .work-box-explain {
         position: absolute;
-        width: 100%;
+        bottom: 0;
         left: 0;
-        opacity: 0;
+        width: 100%;
+        height: 100%;
+        h2, p {
+          margin: 0;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          opacity: 0;
+        }
+        h2 {
+          color: $bWhite;
+          font-size: 32px;
+          display: inline-block;
+          bottom: 53%;
+          transform: translate3d(0%, -100%, 0);
+        }
+        p {
+          color: $bWhite;
+          font-size: 20px;
+          top: 50%;
+          transform: translate3d(0%, 100%, 0);
+        }
       }
-      h2 {
-        color: $bWhite;
-        font-size: 32px;
-        display: inline-block;
-        bottom: 53%;
-        transform: translate3d(0%, -100%, 0);
-      }
-      p {
-        color: $bWhite;
-        font-size: 20px;
-        top: 50%;
-        transform: translate3d(0%, 100%, 0);
+      &:nth-child(odd) {
+        margin-right: 4%;
       }
     }
-    &:nth-child(odd) {
-      margin-right: 4%;
+    .work-box:hover {
+      .work-box-explain {
+        background: rgba(0, 0 , 0, 0.5);
+        h2 {
+          transform: translate3d(0%, 0%, 0);
+          opacity: 1;
+        }
+        p {
+          transform: translate3d(0%, 0%, 0);
+          opacity: 1;
+        }
+      }
+    }
+    .work-tokyodtm {
+      background: url(../images/home/tokyodtm_top.jpg) no-repeat;
+      background-size: cover;
     }
   }
-  .work-box:hover {
-    .work-box-explain {
-      background: rgba(0, 0 , 0, 0.5);
-      h2 {
-        transform: translate3d(0%, 0%, 0);
-        opacity: 1;
-      }
-      p {
-        transform: translate3d(0%, 0%, 0);
-        opacity: 1;
-      }
-    }
-  }
+}
 
-  .work-tokyodtm {
-    background: url(../images/home/tokyodtm_top.jpg) no-repeat;
-    background-size: cover;
-  }
+
+.top-footer {
+  position: relative;
+  top: 100vh;
+  background: $bWhite;
 }
 
 
