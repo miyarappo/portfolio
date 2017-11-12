@@ -156,6 +156,7 @@ body {
 .home-top {
   width: 100%;
   height: 100vh;
+  top: 0;
   background: url(../images/home/home_top.jpg) no-repeat;
   background-size: cover; }
   .home-top .home-top-bg {
@@ -163,7 +164,7 @@ body {
     height: 100%;
     background: linear-gradient(to left, rgba(0, 198, 255, 0.8), rgba(0, 114, 255, 0.8)); }
     .home-top .home-top-bg .home-top-title {
-      padding-top: 38vh;
+      padding-top: 35vh;
       color: #ffffff;
       text-align: center; }
       .home-top .home-top-bg .home-top-title h1 {
@@ -180,16 +181,20 @@ body {
         font-weight: lighter;
         font-style: italic; }
       .home-top .home-top-bg .home-top-title .home-top-btn {
-        font-size: 28px;
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
         width: 160px;
-        height: 50px;
-        line-height: 50px;
+        height: 45px;
+        line-height: 45px;
         border: 2px solid #ffffff;
         border-radius: 40px;
-        margin: 40px auto 0; }
+        margin: 40px auto 0;
+        transition: all 1s ease-out; }
         .home-top .home-top-bg .home-top-title .home-top-btn a {
           color: #ffffff;
           text-decoration: none; }
+        .home-top .home-top-bg .home-top-title .home-top-btn:hover {
+          opacity: 0.7; }
     .home-top .home-top-bg .home-top-arrow {
       position: absolute;
       bottom: 80px;
@@ -205,33 +210,66 @@ body {
         width: 24px;
         height: 24px;
         margin-left: -12px;
-        border-left: 1px solid #fff;
-        border-bottom: 1px solid #fff;
+        border-left: 3px solid #fff;
+        border-bottom: 3px solid #fff;
         transform: rotate(-45deg);
         animation: fadeArrow 2s infinite;
         box-sizing: border-box; }
 
 .home-works {
+  background: #ffffff;
   width: 85%;
-  margin: 48px auto;
+  margin: 0 auto 120px;
   overflow: hidden; }
   .home-works .work-box {
     width: 48%;
     height: 400px;
+    margin-top: 48px;
     float: left;
-    background: black; }
-    .home-works .work-box a {
-      display: block;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    transition: opacity .35s ease-out; }
+    .home-works .work-box * {
+      transition: all 0.6s ease-out; }
+    .home-works .work-box .work-box-explain {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
-      height: 100%;
-      cursor: pointer; }
+      height: 100%; }
+      .home-works .work-box .work-box-explain h2, .home-works .work-box .work-box-explain p {
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        opacity: 0; }
+      .home-works .work-box .work-box-explain h2 {
+        color: #ffffff;
+        font-size: 32px;
+        display: inline-block;
+        bottom: 53%;
+        transform: translate3d(0%, -100%, 0); }
+      .home-works .work-box .work-box-explain p {
+        color: #ffffff;
+        font-size: 20px;
+        top: 50%;
+        transform: translate3d(0%, 100%, 0); }
     .home-works .work-box:nth-child(odd) {
       margin-right: 4%; }
+  .home-works .work-box:hover .work-box-explain {
+    background: rgba(0, 0, 0, 0.5); }
+    .home-works .work-box:hover .work-box-explain h2 {
+      transform: translate3d(0%, 0%, 0);
+      opacity: 1; }
+    .home-works .work-box:hover .work-box-explain p {
+      transform: translate3d(0%, 0%, 0);
+      opacity: 1; }
   .home-works .work-tokyodtm {
     background: url(../images/home/tokyodtm_top.jpg) no-repeat;
     background-size: cover; }
 
-@keyframes _fadeArrow {
+@keyframes fadeArrow {
   0% {
     transform: rotate(-45deg) translate(0, 0);
     opacity: 0; }
