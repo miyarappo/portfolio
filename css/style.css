@@ -274,6 +274,9 @@ body {
     .home-main .home-works .work-tokyodtm {
       background: url(../images/home/tokyodtm_top.jpg) no-repeat;
       background-size: cover; }
+    .home-main .home-works .work-mks {
+      background: url(../images/home/mks_top.jpg) no-repeat;
+      background-size: cover; }
 
 .top-footer {
   position: relative;
@@ -296,7 +299,6 @@ body {
 .top {
   width: 100%;
   height: 80vh;
-  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
   background-size: cover; }
   .top .top-bg {
     width: 100%;
@@ -327,6 +329,12 @@ body {
           color: #ffffff; }
         .top .top-bg .top-title .top-btn:hover {
           opacity: 0.8; }
+
+.top_tokyodtm {
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg); }
+
+.top_mks {
+  background: url(../images/works/mks/mks_top.jpg); }
 
 .project-details {
   padding-top: 64px;

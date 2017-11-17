@@ -7,7 +7,6 @@
 .top {
   width: 100%;
   height: 80vh;
-  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
   background-size: cover;
   .top-bg {
     width: 100%;
@@ -45,6 +44,13 @@
       }
     }
   }
+}
+
+.top_tokyodtm {
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
+}
+.top_mks {
+  background: url(../images/works/mks/mks_top.jpg);
 }
 
 .project-details {
