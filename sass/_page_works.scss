@@ -47,11 +47,19 @@
 }
 
 .top_tokyodtm {
-  background: url(../images/works/tokyodtm/tokyodtm_top.jpg);
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg) no-repeat;
+  background-size: cover;
 }
 .top_mks {
-  background: url(../images/works/mks/mks_top.jpg);
+  background: url(../images/works/mks/mks_top.jpg) no-repeat;
+  background-size: cover;
 }
+.top_beluga {
+  background: url(../images/works/beluga/beluga_top.jpg) no-repeat;
+  background-size: cover;
+}
+
+
 
 .project-details {
   padding-top: 64px;
@@ -82,6 +90,11 @@
   margin: 96px auto;
   .screen-item-box {
     margin-bottom: 64px;
+    img {
+      width: 620px;
+      height: 415px;
+      padding: 6px 0 0 10px;
+    }
     p {
       margin-top: 8px;
       text-align: center;

@@ -277,6 +277,9 @@ body {
     .home-main .home-works .work-mks {
       background: url(../images/home/mks_top.jpg) no-repeat;
       background-size: cover; }
+    .home-main .home-works .work-beluga {
+      background: url(../images/home/beluga_top.jpg) no-repeat;
+      background-size: cover; }
 
 .top-footer {
   position: relative;
@@ -331,10 +334,16 @@ body {
           opacity: 0.8; }
 
 .top_tokyodtm {
-  background: url(../images/works/tokyodtm/tokyodtm_top.jpg); }
+  background: url(../images/works/tokyodtm/tokyodtm_top.jpg) no-repeat;
+  background-size: cover; }
 
 .top_mks {
-  background: url(../images/works/mks/mks_top.jpg); }
+  background: url(../images/works/mks/mks_top.jpg) no-repeat;
+  background-size: cover; }
+
+.top_beluga {
+  background: url(../images/works/beluga/beluga_top.jpg) no-repeat;
+  background-size: cover; }
 
 .project-details {
   padding-top: 64px;
@@ -361,6 +370,10 @@ body {
   margin: 96px auto; }
   .screen-items .screen-item-box {
     margin-bottom: 64px; }
+    .screen-items .screen-item-box img {
+      width: 620px;
+      height: 415px;
+      padding: 6px 0 0 10px; }
     .screen-items .screen-item-box p {
       margin-top: 8px;
       text-align: center; }
