@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Roboto:300i,400,700i);
 
 .home-top {
   width: 100%;
@@ -161,14 +160,11 @@
   }
 }
 
-
 .top-footer {
   position: relative;
   top: 100vh;
   background: $bWhite;
 }
-
-
 
 @keyframes fadeArrow {
   0% {
@@ -182,4 +178,52 @@
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .home-top {
+    .home-top-bg {
+      .home-top-title {
+        padding-top: 28vh;
+        h1 {
+          font-size: 54px;
+          letter-spacing: 4px;
+        }
+        .home-top-sub {
+          margin-top: 16px;
+          font-size: 24px;
+        }
+        .home-top-btn {
+          font-size: 16px;
+          width: 120px;
+          height: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  .home-main {
+    .home-works {
+      width: 100%;
+      .work-box {
+        width: 100%;
+        margin-top: 24px;
+      }
+
+      .work-tokyodtm {
+        background-position: center;
+      }
+      .work-mks {
+        background-position: center;
+      }
+      .work-beluga {
+        background-position: center;
+      }
+      .work-yours {
+        background-position: center;
+      }
+    }
+  }
+
 }

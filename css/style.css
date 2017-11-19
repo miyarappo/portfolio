@@ -34,6 +34,30 @@ body {
   width: 640px;
   margin: 0 auto; }
 
+.emphasis {
+  background: linear-gradient(white 50%, yellow); }
+
+footer {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  padding-top: 50px; }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    margin: 0 auto; }
+    footer ul li {
+      font-size: 32px; }
+      footer ul li a {
+        color: #444444;
+        transition: all .5s ease-out; }
+        footer ul li a:hover {
+          opacity: .5; }
+  footer p {
+    margin-top: 24px;
+    font-size: 8px; }
+
 /*------- hamberger menu ---------*/
 .hamburger-menu {
   position: fixed;
@@ -151,6 +175,15 @@ body {
       margin-right: 0; }
     .overlay-menu-icon li a:after {
       opacity: 0; }
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%;
+    margin: 0 auto; }
+  footer ul {
+    width: 180px; }
+    footer ul li {
+      font-size: 40px; } }
 
 .home-top {
   width: 100%;
@@ -299,8 +332,33 @@ body {
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0; } }
 
-.emphasis {
-  background: linear-gradient(white 50%, yellow); }
+@media screen and (max-width: 600px) {
+  .home-top .home-top-bg .home-top-title {
+    padding-top: 28vh; }
+    .home-top .home-top-bg .home-top-title h1 {
+      font-size: 54px;
+      letter-spacing: 4px; }
+    .home-top .home-top-bg .home-top-title .home-top-sub {
+      margin-top: 16px;
+      font-size: 24px; }
+    .home-top .home-top-bg .home-top-title .home-top-btn {
+      font-size: 16px;
+      width: 120px;
+      height: 32px;
+      line-height: 32px; }
+  .home-main .home-works {
+    width: 100%; }
+    .home-main .home-works .work-box {
+      width: 100%;
+      margin-top: 24px; }
+    .home-main .home-works .work-tokyodtm {
+      background-position: center; }
+    .home-main .home-works .work-mks {
+      background-position: center; }
+    .home-main .home-works .work-beluga {
+      background-position: center; }
+    .home-main .home-works .work-yours {
+      background-position: center; } }
 
 .top {
   width: 100%;
@@ -363,9 +421,9 @@ body {
   .project-details h3:after {
     display: block;
     content: "";
-    width: 150px;
-    height: 2px;
-    margin: 5px auto 0;
+    width: 80px;
+    height: 3px;
+    margin: 12px auto 0;
     background: #444444; }
   .project-details p {
     margin-bottom: 40px;
@@ -374,7 +432,8 @@ body {
 
 .screen-items {
   width: 640px;
-  margin: 96px auto; }
+  margin: 96px auto;
+  padding-bottom: 64px; }
   .screen-items .screen-item-box {
     margin-bottom: 64px; }
     .screen-items .screen-item-box img {
@@ -430,26 +489,70 @@ body {
   .screen-items p {
     text-align: center; }
 
-footer {
-  width: 100%;
-  height: 120px;
-  text-align: center;
-  padding-top: 50px; }
-  footer ul {
-    display: flex;
-    justify-content: space-between;
-    width: 160px;
+@media screen and (max-width: 600px) {
+  .top .top-bg .top-title p:first-child {
+    margin-bottom: 4px; }
+  .top .top-bg .top-title h2 {
+    font-size: 24px;
+    letter-spacing: 0;
+    margin-bottom: 4px; }
+  .top .top-bg .top-title .top-btn {
+    margin-top: 14px; }
+  .top-tokyodtm {
+    background-position: center; }
+  .top-mks {
+    background-position: center; }
+  .top-beluga {
+    background-position: center; }
+  .top-yours {
+    background-position: center; }
+  .project-details {
+    padding-top: 32px; }
+    .project-details h3 {
+      font-size: 20px; }
+    .project-details h3:after {
+      width: 60px;
+      margin: 8px auto 0; }
+    .project-details p {
+      margin-bottom: 24px;
+      font-size: 14px; }
+    .project-details ul {
+      font-size: 14px;
+      margin: 24px 0 32px;
+      line-height: 24px; }
+  .screen-items {
+    width: 95%;
     margin: 0 auto; }
-    footer ul li {
-      font-size: 32px; }
-      footer ul li a {
-        color: #444444;
-        transition: all .5s ease-out; }
-        footer ul li a:hover {
-          opacity: .5; }
-  footer p {
-    margin-top: 24px;
-    font-size: 8px; }
+    .screen-items .screen-item-box {
+      margin-bottom: 32px; }
+      .screen-items .screen-item-box img {
+        width: 100%;
+        height: auto; }
+      .screen-items .screen-item-box p {
+        font-size: 12px;
+        margin-top: 4px; }
+    .screen-items .screen-item {
+      width: 100%;
+      height: 250px; }
+      .screen-items .screen-item .item-upper {
+        padding: 6px 0 0 10px; }
+        .screen-items .screen-item .item-upper .item-upper-red {
+          width: 8px;
+          height: 8px;
+          margin-right: 6px; }
+        .screen-items .screen-item .item-upper .item-upper-yellow {
+          width: 8px;
+          height: 8px;
+          margin-right: 6px; }
+        .screen-items .screen-item .item-upper .item-upper-green {
+          width: 8px;
+          height: 8px; }
+      .screen-items .screen-item img {
+        width: calc(100% - 20px);
+        height: 223px;
+        padding: 4px 0 0 7px; }
+    .screen-items p {
+      font-size: 12px; } }
 
 .about-top {
   width: 100%;
@@ -460,7 +563,11 @@ footer {
   .about-top .message-area {
     padding-top: 15vh; }
     .about-top .message-area .main-message {
-      font-size: 32px; }
+      font-size: 40px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.2em; }
     .about-top .message-area p:nth-of-type(2) {
       margin-top: 24px; }
 
@@ -471,7 +578,7 @@ footer {
     .about-main .about-main-box h2:after {
       display: block;
       content: "";
-      background: #d4d7d9;
+      background: #EAEAE0;
       height: 2px;
       margin-top: 4px; }
   .about-main .about-main-box h3 {
@@ -483,3 +590,40 @@ footer {
   .about-main .about-main-box .about-main-box-text p {
     text-align: justify;
     margin-bottom: 16px; }
+
+@media screen and (max-width: 600px) {
+  .about-top {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to left, rgba(0, 198, 255, 0.8), rgba(0, 114, 255, 0.8));
+    text-align: center;
+    color: #ffffff; }
+    .about-top .message-area {
+      padding-top: 15vh; }
+      .about-top .message-area .main-message {
+        font-size: 40px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1.2em; }
+      .about-top .message-area p:nth-of-type(2) {
+        margin-top: 24px; }
+  .about-main .about-main-box {
+    padding-top: 48px; }
+    .about-main .about-main-box h2 {
+      font-size: 24px; }
+      .about-main .about-main-box h2:after {
+        display: block;
+        content: "";
+        background: #EAEAE0;
+        height: 2px;
+        margin-top: 4px; }
+    .about-main .about-main-box h3 {
+      padding: 24px 0;
+      font-size: 24px; }
+    .about-main .about-main-box h4 {
+      padding: 16px 0 0;
+      font-weight: bold; }
+    .about-main .about-main-box .about-main-box-text p {
+      text-align: justify;
+      margin-bottom: 16px; } }
