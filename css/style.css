@@ -286,6 +286,7 @@ footer {
         .home-main .home-works .work-box .work-box-explain h2 {
           color: #ffffff;
           font-size: 32px;
+          line-height: 1.2em;
           display: inline-block;
           bottom: 53%;
           transform: translate3d(0%, -100%, 0); }
@@ -443,6 +444,8 @@ footer {
     .screen-items .screen-item-box p {
       margin-top: 8px;
       text-align: center; }
+    .screen-items .screen-item-box .item-iphone {
+      padding: 0; }
   .screen-items .screen-item {
     width: 640px;
     height: 450px;
@@ -571,43 +574,8 @@ footer {
     .about-top .message-area p:nth-of-type(2) {
       margin-top: 24px; }
 
-.about-main .about-main-box {
-  padding-top: 48px; }
-  .about-main .about-main-box h2 {
-    font-size: 24px; }
-    .about-main .about-main-box h2:after {
-      display: block;
-      content: "";
-      background: #EAEAE0;
-      height: 2px;
-      margin-top: 4px; }
-  .about-main .about-main-box h3 {
-    padding: 24px 0;
-    font-size: 24px; }
-  .about-main .about-main-box h4 {
-    padding: 16px 0 0;
-    font-weight: bold; }
-  .about-main .about-main-box .about-main-box-text p {
-    text-align: justify;
-    margin-bottom: 16px; }
-
-@media screen and (max-width: 600px) {
-  .about-top {
-    width: 100%;
-    height: 40vh;
-    background: linear-gradient(to left, rgba(0, 198, 255, 0.8), rgba(0, 114, 255, 0.8));
-    text-align: center;
-    color: #ffffff; }
-    .about-top .message-area {
-      padding-top: 15vh; }
-      .about-top .message-area .main-message {
-        font-size: 40px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        font-style: italic;
-        line-height: 1.2em; }
-      .about-top .message-area p:nth-of-type(2) {
-        margin-top: 24px; }
+.about-main {
+  padding-bottom: 64px; }
   .about-main .about-main-box {
     padding-top: 48px; }
     .about-main .about-main-box h2 {
@@ -626,4 +594,20 @@ footer {
       font-weight: bold; }
     .about-main .about-main-box .about-main-box-text p {
       text-align: justify;
-      margin-bottom: 16px; } }
+      margin-bottom: 16px; }
+
+@media screen and (max-width: 600px) {
+  .about-top {
+    height: 50vh; }
+    .about-top .message-area {
+      font-size: 14px; }
+      .about-top .message-area .main-message {
+        font-size: 32px; }
+      .about-top .message-area p:nth-of-type(2) {
+        margin-top: 24px; }
+  .about-main .about-main-box h2 {
+    font-size: 20px; }
+  .about-main .about-main-box h3 {
+    font-size: 20px; }
+  .about-main .about-main-box .about-main-box-text p {
+    font-size: 14px; } }
