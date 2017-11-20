@@ -66,7 +66,7 @@ footer {
   height: 27px;
   width: 35px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 2000;
   transition: opacity .25s ease; }
   .hamburger-menu:hover {
     opacity: .7; }
@@ -95,8 +95,8 @@ footer {
 
 .overlay {
   position: fixed;
-  background: #444444;
-  z-index: 50;
+  background: linear-gradient(to left, #00c6ff, #0072ff);
+  z-index: 300;
   top: 0;
   left: 0;
   width: 100%;
