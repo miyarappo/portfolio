@@ -102,6 +102,8 @@
     }
     .item-iphone {
       padding: 0;
+      display: block;
+      margin: 0 auto;
     }
   }
   .screen-item {
@@ -251,7 +253,7 @@
       img {
         width: calc(100% - 20px);
         height: 223px;
-        padding: 4px 0 0 7px;
+        padding: 4px 0 0 10px;
       }
     }
     p {
