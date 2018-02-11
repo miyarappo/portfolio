@@ -25,6 +25,6 @@ gulp.task('minify-css', function() {
 });
 
 
-gulp.task("default", function() {
+gulp.task("build", function() {
   gulp.watch("sass/*.scss", ["sass"]);
 });
